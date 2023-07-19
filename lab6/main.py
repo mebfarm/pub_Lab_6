@@ -1,5 +1,5 @@
 # Michael Bailey
-from decode_passcode import decoder
+#from decode_passcode import decoder
 
 # This is a sample Python script.
 
@@ -20,9 +20,12 @@ def encode(passwd):
     return out_1
 
 
-#def decode(passwd):
-
-  #  return passwd
+def decoder(passwd):
+    original = ''
+    for i in passwd:
+        data = str((int(i) - 3) % 10)
+        original += data
+    return original
 
 
 # Press the green button in the gutter to run the script.
@@ -39,10 +42,9 @@ if __name__ == '__main__':
             print('Your password has been coded and stored!')
         elif option == 2:
             original = decoder(encoded_password)
-            print(f'The encoded password is {encoded_password}, and the original passcode is {original} ')
+            print(f'The encoded password is {encoded_password}, and the original passcode is {original}. ')
         elif option == 3:
             code_on = False
-
 
 
 

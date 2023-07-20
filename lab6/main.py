@@ -1,5 +1,5 @@
 # Michael Bailey
-#from decode_passcode import decoder
+
 
 # This is a sample Python script.
 
@@ -18,14 +18,6 @@ def encode(passwd):
     out = [str(i) for i in s_to_int]
     out_1 = "".join(out)
     return out_1
-
-
-def decoder(passwd):
-    original = ''
-    for i in passwd:
-        data = str((int(i) - 3) % 10)
-        original += data
-    return original
 
 
 # Press the green button in the gutter to run the script.
